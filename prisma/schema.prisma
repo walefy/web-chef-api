@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type Ingredient {
+  name    String
+  measure String
+}
+
+model FoodAndBeverage {
+  id           String       @id @default(uuid()) @map("_id")
+  externId     String
+  name         String
+  image        String
+  ingredients  Ingredient[]
+  category     String
+  instructions String
+  video        String
+  isAlcoholic  Boolean
+}
+
+model User {
+  id        String   @id @default(uuid()) @map("_id")
+  name      String
+  email     String   @unique
+  password  String
+  favorites String[]
+  photo     String
+}
