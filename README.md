@@ -6,13 +6,13 @@ Uma API de receitas baseada nas APIs [The Meal DB](https://www.themealdb.com/api
 
 #### Retorna todas as receitas
 
-```http
+```plaintext
   GET /recipes
 ```
 
 #### Retorna uma receita
 
-```http
+```plaintext
   GET /recipes/id/${id}
 ```
 
@@ -22,7 +22,7 @@ Uma API de receitas baseada nas APIs [The Meal DB](https://www.themealdb.com/api
 
 #### Retorna as receitas que tenham o nome
 
-```http
+```plaintext
   GET /recipes/name/${name}
 ```
 
