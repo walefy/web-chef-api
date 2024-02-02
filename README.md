@@ -32,13 +32,13 @@ Uma API de receitas baseada nas APIs [The Meal DB](https://www.themealdb.com/api
 
 #### Retorna todas as receitas de comidas
 
-```http
+```plaintext
   GET /recipes/meals
 ```
 
 #### Retorna todas as receitas de bebidas
 
-```http
+```plaintext
   GET /recipes/drinks
 ```
 
